@@ -22,4 +22,4 @@ const model = new EzModel("Items", {
 
 app.addApp(model, { prefix: "/items" });
 
-app.start();
+app.start({ address: "0.0.0.0", server: { trustProxy: true } });
