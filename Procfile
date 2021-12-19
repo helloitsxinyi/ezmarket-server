@@ -1,1 +1,1 @@
-web: npm run ezb
+web: npm start
