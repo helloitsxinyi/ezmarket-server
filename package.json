@@ -18,6 +18,7 @@
     "@ezbackend/core": "^0.1.0",
     "@ezbackend/cors": "^0.1.0",
     "@ezbackend/utils": "^0.1.0",
+    "@ezbackend/auth": "^0.1.0",
     "ezbackend": "^0.1.0"
   },
   "devDependencies": {
