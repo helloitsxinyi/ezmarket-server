@@ -19,11 +19,11 @@
     "@ezbackend/cors": "^0.1.0",
     "@ezbackend/utils": "^0.1.0",
     "@ezbackend/auth": "^0.1.0",
+    "@ezbackend/db-ui": "^0.1.0",
+    "@ezbackend/openapi": "^0.1.0",
     "ezbackend": "^0.1.0"
   },
   "devDependencies": {
-    "@ezbackend/db-ui": "^0.1.0",
-    "@ezbackend/openapi": "^0.1.0",
     "@types/node": "^16.11.12",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.4"
