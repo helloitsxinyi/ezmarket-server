@@ -19,30 +19,8 @@ const Items = new EzModel("items", {
   itemName: Type.VARCHAR,
   price: Type.DOUBLE,
   available: Type.BOOL,
-  // user: {
-  //   type: Type.MANY_TO_ONE,
-  //   target: "user",
-  //   inverseSide: "item",
-  //   joinColumn: true,
-  //   onDelete: "SET NULL",
-  //   nullable: true,
-  // },
-  // userId: {
-  //   type: Type.INT,
-  //   nullable: true,
-  // },
 });
 
-// export const User = new EzUser("user", ["google"], {
-//   item: {
-//     type: Type.ONE_TO_MANY,
-//     target: "items",
-//     inverseSide: "user",
-//     nullable: true,
-//   },
-// });
-
 app.addApp(Items, { prefix: "/items" });
-// app.addApp(User, { prefix: "/users" });
 
 app.start({ address: "0.0.0.0", server: { trustProxy: true } });
