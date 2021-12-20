@@ -19,18 +19,18 @@ const Items = new EzModel("items", {
   itemName: Type.VARCHAR,
   price: Type.DOUBLE,
   available: Type.BOOL,
-  user: {
-    type: Type.MANY_TO_ONE,
-    target: "user",
-    inverseSide: "item",
-    joinColumn: true,
-    onDelete: "SET NULL",
-    nullable: true,
-  },
-  userId: {
-    type: Type.INT,
-    nullable: true,
-  },
+  // user: {
+  //   type: Type.MANY_TO_ONE,
+  //   target: "user",
+  //   inverseSide: "item",
+  //   joinColumn: true,
+  //   onDelete: "SET NULL",
+  //   nullable: true,
+  // },
+  // userId: {
+  //   type: Type.INT,
+  //   nullable: true,
+  // },
 });
 
 // export const User = new EzUser("user", ["google"], {
