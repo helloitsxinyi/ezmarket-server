@@ -2,7 +2,7 @@ import { EzBackend, EzModel, Type } from "@ezbackend/common";
 import { EzOpenAPI } from "@ezbackend/openapi";
 import { EzDbUI } from "@ezbackend/db-ui";
 import { EzCors } from "@ezbackend/cors";
-import { EzUser } from "@ezbackend/auth";
+// import { EzUser } from "@ezbackend/auth";
 
 const app = new EzBackend();
 
@@ -33,16 +33,16 @@ const Items = new EzModel("items", {
   },
 });
 
-export const User = new EzUser("user", ["google"], {
-  item: {
-    type: Type.ONE_TO_MANY,
-    target: "items",
-    inverseSide: "user",
-    nullable: true,
-  },
-});
+// export const User = new EzUser("user", ["google"], {
+//   item: {
+//     type: Type.ONE_TO_MANY,
+//     target: "items",
+//     inverseSide: "user",
+//     nullable: true,
+//   },
+// });
 
 app.addApp(Items, { prefix: "/items" });
-app.addApp(User, { prefix: "/users" });
+// app.addApp(User, { prefix: "/users" });
 
 app.start({ address: "0.0.0.0", server: { trustProxy: true } });
