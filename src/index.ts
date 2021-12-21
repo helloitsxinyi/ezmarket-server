@@ -18,7 +18,7 @@ app.addApp(new EzCors());
 const Items = new EzModel("items", {
   shopName: Type.VARCHAR,
   itemName: Type.VARCHAR,
-  price: Type.DOUBLE,
+  price: Type.FLOAT,
   available: Type.BOOL,
 });
 
@@ -26,7 +26,7 @@ const ormConfig: Parameters<typeof createConnection>[0] = {
   type: "postgres",
   url: process.env.DATABASE_URL,
   synchronize: true,
-  ssl: process.env.NODE_ENV === "production",
+  ssl: { rejectUnauthorized: false },
 };
 
 app.addApp(Items, { prefix: "/items" });
