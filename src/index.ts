@@ -27,7 +27,7 @@ const ormConfig: Parameters<typeof createConnection>[0] = {
   url:
     process.env.DATABASE_URL || "postgres://user:pw@localhost:5432/ezmarketdb",
   synchronize: true,
-  ssl: process.env.NODE_ENV === "production",
+  ssl: { rejectUnauthorized: false },
 };
 
 app.addApp(Items, { prefix: "/items" });
