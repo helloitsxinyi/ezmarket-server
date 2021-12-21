@@ -24,9 +24,10 @@ const Items = new EzModel("items", {
 
 const ormConfig: Parameters<typeof createConnection>[0] = {
   type: "postgres",
-  url: process.env.DATABASE_URL,
+  url:
+    process.env.DATABASE_URL || "postgres://user:pw@localhost:5432/ezmarketdb",
   synchronize: true,
-  ssl: { rejectUnauthorized: false },
+  ssl: process.env.NODE_ENV === "production",
 };
 
 app.addApp(Items, { prefix: "/items" });
